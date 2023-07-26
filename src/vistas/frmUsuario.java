@@ -618,17 +618,17 @@ public class frmUsuario extends javax.swing.JFrame {
         modeloDetalle.setRowCount(0); // Limpiar el contenido actual de la tabla jtPlanilla
         Usuario obj_usuario = new Usuario();
         ArrayList<Usuario> lista_usuarios = obj_usuario.mostrar_usuarios();
-            for (Usuario usuario : lista_usuarios) {
-                // Agregar una nueva fila a la tabla con los datos del usuario
-                modelo.addRow(new Object[]{
-                    usuario.getCedula(),
-                    usuario.getUsuario(),
-                    usuario.getNombre(),
-                    usuario.getApellido(),
-                    usuario.getCorreo(),
-                    usuario.getDireccion(),
-                    usuario.getFecha_creacion(),});
-            }
+        for (Usuario usuario : lista_usuarios) {
+            // Agregar una nueva fila a la tabla con los datos del usuario
+            modelo.addRow(new Object[]{
+                usuario.getCedula(),
+                usuario.getUsuario(),
+                usuario.getPassword(),
+                usuario.getNombre(),
+                usuario.getApellido(),
+                usuario.getDireccion(),
+                usuario.getFecha_creacion(),});
+        }
     }//GEN-LAST:event_btnCargar1ActionPerformed
 
     public void inhabilitar() {

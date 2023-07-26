@@ -27,7 +27,6 @@ public class Usuario {
     private String password;
     private String nombre;
     private String apellido;
-    private String correo;
     private String direccion;
     private String fecha_creacion;
     private String fecha_modificacion;
@@ -35,13 +34,12 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String cedula, String usuario, String password, String nombre, String apellido, String correo, String direccion, String fecha_creacion, String fecha_modificacion) {
+    public Usuario(String cedula, String usuario, String password, String nombre, String apellido, String direccion, String fecha_creacion, String fecha_modificacion) {
         this.cedula = cedula;
         this.usuario = usuario;
         this.password = password;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.correo = correo;
         this.direccion = direccion;
         this.fecha_creacion = fecha_creacion;
         this.fecha_modificacion = fecha_modificacion;
@@ -87,14 +85,6 @@ public class Usuario {
         this.apellido = apellido;
     }
 
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
     public String getDireccion() {
         return direccion;
     }
@@ -118,6 +108,8 @@ public class Usuario {
     public void setFecha_modificacion(String fecha_modificacion) {
         this.fecha_modificacion = fecha_modificacion;
     }
+
+   
 
 
     public int insertar() {
@@ -230,9 +222,11 @@ public class Usuario {
             PreparedStatement ps = Conexion.getConnection().prepareStatement("CALL sp_delete_tbl_usuario(?)");
             ps.setString(1, this.cedula);
 
-            int filasAfectadas = ps.executeUpdate();
-            System.out.println(filasAfectadas);
-            return filasAfectadas;
+            ResultSet rs = ps.executeQuery();
+            if (rs.next())
+                return Integer.parseInt(rs.getString("respuesta"));
+            else
+                return 0;
         } catch (SQLException e) {
             System.out.println("Error: " + e.getMessage());
             return 0;
@@ -250,11 +244,10 @@ public ArrayList<Usuario> mostrar_usuarios() {
             String password = rs.getString(3);
             String nombre = rs.getString(4);
             String apellido = rs.getString(5);
-            String correo = rs.getString(6);
-            String direccion = rs.getString(7);
-            String fecha_creacion = rs.getString(8);
+            String direccion = rs.getString(6);
+            String fecha_creacion = rs.getString(7);
 
-            Usuario usuarioObj = new Usuario(cedula, usuario, password, nombre, apellido, correo, direccion, fecha_creacion, fecha_modificacion);
+            Usuario usuarioObj = new Usuario(cedula, usuario, password, nombre, apellido,direccion, fecha_creacion, fecha_modificacion);
             lista_usuarios.add(usuarioObj);
         }
         return lista_usuarios;
