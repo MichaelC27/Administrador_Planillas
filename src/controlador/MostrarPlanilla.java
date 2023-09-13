@@ -82,24 +82,7 @@ public class MostrarPlanilla {
         this.total_salario_neto = total_salario_neto;
     }
 
-    /*
-    public ArrayList<MostrarPlanilla> mostrar_planillas() {
-        try {
-            ArrayList<MostrarPlanilla> lista_planillas = new ArrayList<MostrarPlanilla>();
-            PreparedStatement ps = Conexion.getConnection().prepareStatement("call sp_select_tbl_planilla");
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                int id_planilla = rs.getInt(1);
-                String fecha_creacion = rs.getString(2);
-                MostrarPlanilla obj_planilla = new MostrarPlanilla(id_planilla, fecha_creacion);
-                lista_planillas.add(obj_planilla);
-            }
-            return lista_planillas;
-        } catch (SQLException e) {
-            System.out.println("Error: " + e.getMessage());
-            return null;
-        }
-    }*/
+
     public ArrayList<MostrarPlanilla> mostrar_planillas() {
         try {
             ArrayList<MostrarPlanilla> lista_planillas = new ArrayList<>();

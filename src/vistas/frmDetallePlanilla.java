@@ -161,13 +161,13 @@ public class frmDetallePlanilla extends javax.swing.JFrame {
     }
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {
-        cargarDetallePlanilla(); // Cargar los detalles de la planilla al abrir el formulario
+        cargarDetallePlanilla(); 
     }
 
     public void cargarDetallePlanilla() {
         DefaultTableModel modelo = (DefaultTableModel) jtPlanilla.getModel();
 
-        // Luego, limpiamos cualquier contenido que pueda haber en la tabla actualmente
+        // limpiar cualquier contenido que pueda haber en la tabla actualmente
         modelo.setRowCount(0);
         DefaultTableModel modeloDetalle = (DefaultTableModel) jtPlanilla.getModel();
         modeloDetalle.setRowCount(0); // Limpiar el contenido actual de la tabla jtPlanilla
@@ -203,7 +203,7 @@ public class frmDetallePlanilla extends javax.swing.JFrame {
 
     private double calcularSumaSalarioNeto(DefaultTableModel modelo) {
         double totalSalarioNeto = 0.0;
-        int columnaSalarioNeto = 10; // Número de columna correspondiente a "Salario Neto"
+        int columnaSalarioNeto = 10; //  columna correspondiente a "Salario Neto"
 
         for (int i = 0; i < modelo.getRowCount(); i++) {
             double salarioNeto = Double.parseDouble(modelo.getValueAt(i, columnaSalarioNeto).toString());
@@ -215,7 +215,7 @@ public class frmDetallePlanilla extends javax.swing.JFrame {
 
     private double calcularSumaSalarioBruto(DefaultTableModel modelo) {
         double totalSalarioBruto = 0.0;
-        int columnaSalarioBruto = 7; // Número de columna correspondiente a "Salario Bruto"
+        int columnaSalarioBruto = 7; // columna correspondiente a "Salario Bruto"
 
         for (int i = 0; i < modelo.getRowCount(); i++) {
             double salarioBruto = Double.parseDouble(modelo.getValueAt(i, columnaSalarioBruto).toString());

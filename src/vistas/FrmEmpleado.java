@@ -565,7 +565,8 @@ public class FrmEmpleado extends javax.swing.JFrame {
         txtNombre.setEnabled(true);
         txtApellido.setEnabled(true);
         txtDireccion.setEnabled(true);
-        
+        txtDireccion.setBackground(Color.WHITE);
+        txtDireccion.setForeground(Color.BLACK);
         btnEditar.setEnabled(false);
         btnGuardar.setEnabled(true);
         btnCalendar.setEnabled(true);

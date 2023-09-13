@@ -110,13 +110,13 @@ public class AdicionEmpleadoPlanilla {
 
     // Método para calcular el Seguro Social (SS)
     public double SeguroSocial() {
-        seguro_social = salario_bruto * 0.0975; // 9.75%
+        seguro_social = salario_bruto * 0.0975; 
         return seguro_social;
     }
 
     // Método para calcular el Seguro Educativo (SE)
     public double SeguroEducativo() {
-        seguro_educativo = salario_bruto * 0.0125; // 1.25%
+        seguro_educativo = salario_bruto * 0.0125; 
         return seguro_educativo;
     }
 
@@ -157,7 +157,7 @@ public class AdicionEmpleadoPlanilla {
 
     public int insertar() {
         int id =obtenerUltimoID();
-        System.out.println("EL Id "+this.id_planilla);
+        //System.out.println("EL Id "+this.id_planilla);
         try {
             PreparedStatement ps = Conexion.getConnection().prepareStatement("CALL sp_insert_tbl_detalle_planilla(?, ?, ?, ?, ?, ?, ?, ?)");
             ps.setInt(1, id); // Usamos el ID de planilla pasado como parámetro

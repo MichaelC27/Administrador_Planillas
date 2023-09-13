@@ -444,7 +444,7 @@ public class frmUsuario extends javax.swing.JFrame {
         obj_usuario.setCedula(txtBusqueda.getText());
         int filasAfectadas = obj_usuario.eliminar();
         System.out.println(filasAfectadas);
-        if (filasAfectadas != -1) {
+        if (filasAfectadas > 0) {
             if (filasAfectadas > 0) {
                 JOptionPane.showMessageDialog(rootPane, "Se eliminó el registro exitosamente");
                 inhabilitar();
@@ -452,9 +452,7 @@ public class frmUsuario extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(rootPane, "No se encontró ningún registro para eliminar");
             }
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "No se pudo determinar el número de filas afectadas");
-        }
+        } 
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed

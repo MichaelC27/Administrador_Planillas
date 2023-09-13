@@ -113,7 +113,7 @@ public class Empleado {
             ps.setString(6, this.numero_telefono);
 
             ResultSet rs = ps.executeQuery();
-            System.out.println(rs.getString("respuesta"));
+            //System.out.println(rs.getString("respuesta"));
             if (rs.next()) {
                 return Integer.parseInt(rs.getString("respuesta"));
             } else {

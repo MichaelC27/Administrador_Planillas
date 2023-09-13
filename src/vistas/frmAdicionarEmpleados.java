@@ -387,7 +387,7 @@ public class frmAdicionarEmpleados extends javax.swing.JFrame {
                 txtDireccion.setText(obj.getDireccion());
             } else {
 
-                JOptionPane.showMessageDialog(rootPane, "No se encontro el usuario");
+                JOptionPane.showMessageDialog(rootPane, "No se encontro el Empleado");
             }
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
@@ -396,7 +396,7 @@ public class frmAdicionarEmpleados extends javax.swing.JFrame {
         String horasTrabajadasStr = txtHorasTrabajadas.getText().trim();
         String salarioHoraStr = txtSalarioHora.getText().trim();
 
-        // Validar que las horas trabajadas sean mayor o igual a 4 y menor o igual a 12
+        // Validar que las horas trabajadas  4<= horas <=12
         try {
             double horasTrabajadas = Double.parseDouble(horasTrabajadasStr);
             if (horasTrabajadas < 4 || horasTrabajadas > 12) {
@@ -408,7 +408,7 @@ public class frmAdicionarEmpleados extends javax.swing.JFrame {
             return; // Salir del método sin agregar el empleado
         }
 
-        // Validar que el salario por hora sea mayor o igual a 5 y menor o igual a 20
+        // Validar que el salario por hora 5<= horas <=20
         try {
             double salarioHora = Double.parseDouble(salarioHoraStr);
             if (salarioHora < 5 || salarioHora > 20) {

@@ -17,7 +17,6 @@ public class CrearPlanilla {
     private String cedula;
     private String fecha_creacion;
 
-    AdicionEmpleadoPlanilla obj = new AdicionEmpleadoPlanilla();
     public CrearPlanilla() {
     }
 
@@ -52,7 +51,6 @@ public class CrearPlanilla {
         ResultSet rs = ps.executeQuery();
         if (rs.next()) {
             int id_planilla = rs.getInt("respuesta");
-            obj.setId_planilla(id_planilla); 
             System.out.println("ID de la planilla generada: " + id_planilla); // Mostrar el ID de la planilla generado
             return id_planilla;
         } else {
