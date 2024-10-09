@@ -16,7 +16,8 @@
 ## Capturas de Pantalla
 
 ### 1. Pantalla de Inicio/Login
-<img src="ruta/de/tu/imagen_login.png" alt="Pantalla de Inicio/Login" width="600"/>
+<img src="https://github.com/MichaelC27/Administrador_Planillas/raw/master/imagenes/Login.PNG" alt="Pantalla de Inicio/Login" width="600"/>
+
 
 ### 2. Panel Principal o Dashboard
 <img src="ruta/de/tu/imagen_dashboard.png" alt="Panel Principal o Dashboard" width="600"/>
