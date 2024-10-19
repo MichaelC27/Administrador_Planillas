@@ -20,19 +20,18 @@
 
 
 ### 2. Panel Principal o Dashboard
-<img src="ruta/de/tu/imagen_dashboard.png" alt="Panel Principal o Dashboard" width="600"/>
+<img src="https://github.com/MichaelC27/Administrador_Planillas/raw/master/imagenes/Dashboard.PNG" alt="Panel Principal o Dashboard" width="600"/>
 
 ### 3. Formulario de Registro de Empleados
-<img src="ruta/de/tu/imagen_registro_empleados.png" alt="Formulario de Registro de Empleados" width="600"/>
+<img src="https://github.com/MichaelC27/Administrador_Planillas/raw/master/imagenes/Registro_de_Empleados.PNG" alt="Formulario de Registro de Empleados" width="600"/>
 
-### 4. Cálculo de Planilla
-<img src="ruta/de/tu/imagen_calculo_planilla.png" alt="Cálculo de Planilla" width="600"/>
+### 4. Crear Planilla
+<img src="https://github.com/MichaelC27/Administrador_Planillas/raw/master/imagenes/Crear_Planilla.PNG" alt="Crear Planilla" width="600"/>
 
-### 5. Reportes o Resultados
-<img src="ruta/de/tu/imagen_reportes.png" alt="Reportes o Resultados" width="600"/>
+### 5. Planillas Creadas
+<img src="https://github.com/MichaelC27/Administrador_Planillas/raw/master/imagenes/Planillas_Creadas.PNG" alt="Planillas Creadas" width="600"/>
 
-### 6. Configuración o Ajustes (Opcional)
-<img src="ruta/de/tu/imagen_configuracion.png" alt="Configuración o Ajustes" width="600"/>
+### 6. Calculo de Planilla
+<img src="https://github.com/MichaelC27/Administrador_Planillas/raw/master/imagenes/Calculo.PNG" alt="Calculo de Planilla" width="600"/>
 
-### 7. Mensajes de Éxito o Error (Opcional)
-<img src="ruta/de/tu/imagen_mensajes.png" alt="Mensajes de Éxito o Error" width="600"/>
+
